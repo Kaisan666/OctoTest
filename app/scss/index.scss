@@ -1,0 +1,301 @@
+/* ================================ Fonts ================================ */
+@import './fonts.scss';
+
+/* ================================ Animations ================================ */
+@import './_animations/**/*.scss';
+
+/* ================================ Styles ================================ */
+@import './_styles/*.scss';
+
+/* ================================ Reset ================================ */
+@import './reset.scss';
+
+/* ================================ Base ================================ */
+@import './-base/**/*.scss';
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.container {
+  max-width: calc(1140px + 52px);
+  padding-inline: 26px;
+  margin-inline: auto;
+  
+  @include MD {
+    max-width: calc(1140px + 48px);
+    padding-inline: 24px;
+  }
+
+  @include SM {
+    max-width: calc(1140px + 30px);
+    padding-inline: 15px;
+  }
+}
+
+body {
+  font-family: $Noto;
+  font-size: 16px;
+}
+
+section {
+  margin-top: 100px;
+
+  @include LG{
+    margin-top: 80px;
+  }
+
+  @include MD{
+    margin-top: 60px;
+  }
+  @include SM {
+    margin-top: 50px;
+  }
+}
+
+.wrapper{
+  padding-bottom: 100px;
+  @include LG {
+      padding-bottom: 80px;
+  }
+  @include MD {
+    padding-bottom: 60px;
+  }
+  @include SM {
+    padding-bottom: 50px;
+  }
+}
+
+.cards {
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  @include LG {
+    // grid-template-columns: repeat(auto-fit, minmax(455px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include SSM {
+    grid-template-columns: unset;
+  }
+}
+
+.hero {
+  background-color: $black;
+  padding-block: 100px;
+
+  &__content {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info {
+    max-width: 555px;
+  }
+  &__img {
+    max-width: 458px;
+    max-height: 380px;
+    display: flex;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 110%;
+    letter-spacing: 1.2px;
+    color: $blue;
+  }
+  &__description {
+    font-size: 22px;
+    line-height: 136%;
+    letter-spacing: 1.2px;
+    color: $white;
+    margin-top: 22px;
+  }
+  &__buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 16px;
+  }
+  &__btn {
+    &--blue {
+      background-color: $blue;
+    }
+    &--transparent {
+      border: 2px solid $blue;
+      padding-inline: 33.5px;
+      // height: 40px;
+      padding-block: calc(9px - 1.8px) calc(11px - 1.8px);
+    }
+  }
+  @include LG {
+    padding-block: 80px;
+    &__info{
+          padding-block: 23px 13px;
+    }
+    &__title {
+      font-size: 54px;
+      line-height: 111%;
+    }
+    &__description {
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: 0.06em;
+    }
+    &__img {
+    max-width: 455px;
+    max-height: 332px;
+  }
+  &__buttons{
+    margin-top: 30px;
+  }
+  &__btn{
+    &--blue {
+    padding-inline: 30px;
+
+    }
+    &--transparent {
+      border: 2px solid $blue;
+      padding-inline: calc(30px - 1.8px);
+      // height: 40px;
+      padding-block: calc(9px - 1.8px) calc(11px - 1.8px);
+    }
+  }
+  }
+
+  @include MD {
+    padding-block: 70px;
+
+    &__content {
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      padding-inline: 86px;
+    }
+    &__info {
+      max-width: unset;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-block: 0;
+    }
+    &__title {
+      font-size: 46px;
+      line-height: 104%;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    &__description {
+      font-size: 18px;
+      line-height: 144%;
+      text-align: center;
+      letter-spacing: 1px;
+      margin-top: 14px;
+    }
+    &__img {
+      max-width: unset;
+      max-height: unset;
+      width: 100%;
+      img {
+        aspect-ratio: 596 / 364;
+      }
+    }
+    &__btn{
+    &--blue {
+    padding-inline: 28px;
+    padding-bottom: 8px 10px;
+
+    }
+    &--transparent {
+      border: 2px solid $blue;
+      padding-inline: calc(28px - 1.8px);
+      // height: 40px;
+      padding-block: calc(8px - 1.8px) calc(10px - 1.8px);
+    }
+  }
+  }
+  @include SM {
+    padding-block: 60px;
+
+    &__content {
+      padding-inline: 63px;
+    }
+  }
+
+  @include SSM {
+    padding-block: 50px;
+
+    &__content {
+      padding-inline: 15px;
+      gap: 30px;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      align-self: normal;
+    }
+    &__btn {
+      width: 100%;
+    }
+    &__img {
+      img {
+        aspect-ratio: 290 / 146;
+      }
+    }
+  }
+}
+
+.swiper-buttons {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  &__prev-button,
+  &__next-button {
+    padding: 5px;
+    svg {
+      fill: $blue;
+      transition: 0.3s ease-in-out;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        svg {
+          fill: $darkBlue;
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+    &:active {
+      svg {
+        fill: $darkBlue;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+  &__next-button {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include MD {
+    margin-top: 30px;
+  }
+  @include SM {
+    margin-top: 20px;
+    gap: 18px;
+  }
+  @include SSM {
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+
+
+
+.swiper-wrapper {
+  height: auto;
+}

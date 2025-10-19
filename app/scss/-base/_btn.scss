@@ -1,0 +1,17 @@
+.btn{
+    font-size: 13px;
+line-height: 154%;
+letter-spacing: 1.1px;
+text-align: center;
+color: $white;
+padding-inline: 35px;
+padding-block: 9px 11px;
+align-self: flex-start;
+
+@include MD{
+    font-size: 12px;
+line-height: 150%;
+padding-inline: 28px;
+padding-block: 8px 10px;
+}
+}

@@ -1,0 +1,39 @@
+$Noto: "Noto Sans";
+
+//breakpoints
+$LG: 1200px;
+$MD: 992px;
+$SM: 768px;
+$SSM: 576px;
+
+$black: #010101;
+$blue: #00B6DD;
+$white: #FFFFFF;
+$darkBlue: #081580;
+$gray: #D3D8E4;
+$pink: #FF779A;
+
+
+@mixin LG {
+  @media screen and (width < $LG) {
+    @content;
+  }
+}
+
+@mixin MD {
+  @media screen and (width < $MD) {
+    @content;
+  }
+}
+
+@mixin SM {
+  @media screen and (width < $SM) {
+    @content;
+  }
+}
+
+@mixin SSM {
+  @media screen and (width < $SSM) {
+    @content;
+  }
+}

@@ -1,0 +1,125 @@
+include layouts/modules/_m-head.pug
+include layouts/components/header.pug 
+
+html(lang='ru')
+  +m-head
+  body
+    .wrapper
+      +header
+      section.cards.container
+        .card.card--blue
+          .card__category Category | Marketing
+          .card__main
+            .card__img.card__img--gray
+            p.card__author Adam Sandler
+            h2.card__title Solutions for people like you like people
+            h3.card__description How can we help your technology and services business develop a revenue engine based
+          button.card__btn.btn Call to action
+        .card.card--blue
+          .card__category Category | Marketing
+          .card__main
+            .card__img
+              img(src="/assets/images/sakuraImg.png", alt="sakura image")
+            p.card__author Adam Sandler
+            h2.card__title Solutions for people like you like people
+            h3.card__description How can we help your technology and services business develop a revenue engine based
+          button.card__btn.btn Call to action
+        .card.card--dark-blue
+          .card__category Category | Marketing
+          .card__main
+            .card__img.card__img--pink
+            p.card__author Adam Sandler
+            h2.card__title Solutions for people like you like people
+            h3.card__description How can we help your technology and services business develop a revenue engine based
+          button.card__btn.btn Call to action
+        .card.card--dark-blue
+          .card__category Category | Marketing
+          .card__main
+            .card__img.card__img--blue
+            p.card__author Adam Sandler
+            h2.card__title Solutions for people like you like people
+            h3.card__description How can we help your technology and services business develop a revenue engine based
+          button.card__btn.btn Call to action
+        .card.card--blue
+          .card__category Category | Marketing
+          .card__main
+            .card__img
+              img(src="/assets/images/cameraImg.png", alt="camera image" width="300" height="170")
+            p.card__author Adam Sandler
+            h2.card__title Solutions for people like you like people
+            h3.card__description How can we help your technology and services business develop a revenue engine based
+          button.card__btn.btn Call to action
+        .card.card--dark-blue
+          .card__category Category | Marketing
+          .card__main
+            .card__img.card__img--gray
+            p.card__author Adam Sandler
+            h2.card__title Solutions for people like you like people
+            h3.card__description How can we help your technology and services business develop a revenue engine based
+          button.card__btn.btn Call to action
+      section.hero
+        .hero__content.container
+          .hero__info 
+            h2.hero__title Solutions for people like you
+            h3.hero__description How can we help your technology and services business develop a revenue engine based on Hubspot?
+            .hero__buttons
+              button.hero__btn.btn.hero__btn--blue Call to action
+              button.hero__btn.btn.hero__btn--transparent Call to action
+          .hero__img 
+            img(src="/assets/images/cameraImg.png", alt="camera image" width="458" height="380")
+      section.cards-swiper
+        .swiper.container
+          .swiper-wrapper 
+            .swiper-slide 
+              .card.card--blue
+                .card__category Category | Marketing
+                .card__main
+                  .card__img.card__img--gray
+                  p.card__author Adam Sandler
+                  h2.card__title Solutions for people like you like people
+                  h3.card__description How can we help your technology and services business develop a revenue engine based
+                button.card__btn.btn Call to action
+            .swiper-slide 
+              .card.card--blue
+                .card__category Category
+                .card__main
+                  .card__img
+                    img(src="/assets/images/sakuraImg.png", alt="sakura image")
+                  p.card__author Adam Sandler
+                  h2.card__title Solutions for people like you like people
+                  h3.card__description How can we help your technology and services business develop a revenue engine based
+                button.card__btn.btn Call to action
+            .swiper-slide 
+              .card.card--dark-blue
+                .card__category Category | Marketing
+                .card__main
+                  .card__img.card__img--pink
+                  p.card__author Adam Sandler
+                  h2.card__title Solutions for people like you like people
+                  h3.card__description How can we help your technology and services business develop a revenue engine based
+                button.card__btn.btn Call to action
+            .swiper-slide 
+              .card.card--dark-blue
+                .card__category Category | Marketing
+                .card__main
+                  .card__img.card__img--pink
+                  p.card__author Adam Sandler
+                  h2.card__title Solutions for people like you like people
+                  h3.card__description How can we help your technology and services business develop a revenue engine based
+                button.card__btn.btn Call to action
+            .swiper-slide 
+              .card.card--dark-blue
+                .card__category Category | Marketing
+                .card__main
+                  .card__img.card__img--gray
+                  p.card__author Adam Sandler
+                  h2.card__title Solutions for people like you like people
+                  h3.card__description How can we help your technology and services business develop a revenue engine based
+                button.card__btn.btn Call to action
+          .swiper-buttons
+            button.swiper-buttons__prev-button.swiper-prev-button
+              svg(width="13" height="26")
+                use(href="/assets/icons/sprite.svg#swiperArrow")
+            button.swiper-buttons__next-button.swiper-next-button
+              svg(width="13" height="26")
+                use(href="/assets/icons/sprite.svg#swiperArrow")
